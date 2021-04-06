@@ -13,8 +13,10 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "node server",
-    "heroku-postbuild": "cd react-ui/ && npm install && npm run build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -22,10 +24,6 @@
       "react-app/jest"
     ]
   },
-  "cacheDirectories": [
-    "node_modules",
-    "react-ui/node_modules"
-  ],
   "browserslist": {
     "production": [
       ">0.2%",
