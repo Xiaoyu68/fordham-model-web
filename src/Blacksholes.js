@@ -60,7 +60,7 @@ function Blacksholes() {
       <br />
       <label style={{marginLeft:10}}>
       Volatility:
-        <input value={form.sigma} name="sigma" onChange={updateField} style={{marginLeft:106}}/>
+        <input value={form.sigma} name="sigma" onChange={updateField} style={{marginLeft:109}}/>
       </label>
       <br />
       <br />
