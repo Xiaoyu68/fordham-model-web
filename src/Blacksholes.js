@@ -26,7 +26,7 @@ function Blacksholes() {
         console.log(response)
         setState({
             ...form,
-            res: response.data.p
+            res: response.data.p.toFixed(2)
         })
     })
   };
@@ -40,47 +40,51 @@ function Blacksholes() {
 
   return (
     <form onSubmit={printValues}>
-      <label>
-        s:
-        <input value={form.s} name="s" onChange={updateField} />
+      <h2>Black-Sholes Model</h2>
+      <label style={{marginLeft:10}}>
+        Underlying Asset Price:
+        <input value={form.s} name="s" onChange={updateField} style={{marginLeft:10}} />
       </label>
       <br />
       <br />
-      <label>
-        t:
+      <label style={{marginLeft:10}}>
+        Time to Maturity:
         <input
           value={form.t}
           name="t"
           onChange={updateField}
+          style={{marginLeft:54}}
         />
       </label>
       <br/>
       <br />
-      <label>
-        sigma:
-        <input value={form.sigma} name="sigma" onChange={updateField} />
+      <label style={{marginLeft:10}}>
+      Volatility:
+        <input value={form.sigma} name="sigma" onChange={updateField} style={{marginLeft:106}}/>
       </label>
       <br />
       <br />
-      <label>
-        x:
+      <label style={{marginLeft:10}}>
+        Strike Price:
         <input
           value={form.x}
           name="x"
           onChange={updateField}
+          style={{marginLeft:86}}
         />
       </label>
       <br/>
       <br />
-      <label>
-        r:
-        <input value={form.r} name="r" onChange={updateField} />
+      <label style={{marginLeft:10}}>
+        Risk-free Interest Rate:
+        <input value={form.r} name="r" onChange={updateField} style={{marginLeft:12}}/>
       </label>
       <br />
       <br />
-      <button>Submit</button>
+      <button style={{marginLeft:12}}>Submit</button>
       <br />
-      <div>{form.res}</div>
+      <br/>
+      <div style={{marginLeft:10}}>Option Price: {form.res}</div>
     </form>
     
   );
